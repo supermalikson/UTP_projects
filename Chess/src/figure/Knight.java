@@ -19,7 +19,7 @@ public class Knight extends Figure{
         this.name = "Knight";
 
         sprite = sheet.getSubimage(
-                spriteSize * 4, team == WHITE ? 0 : spriteSize, spriteSize, spriteSize)
+                spriteSize * 3, team == WHITE ? 0 : spriteSize, spriteSize, spriteSize)
                 .getScaledInstance(board.tileSize, board.tileSize, BufferedImage.SCALE_SMOOTH
                 );
 

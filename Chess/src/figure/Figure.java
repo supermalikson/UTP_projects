@@ -27,17 +27,19 @@ public class Figure {
 
     public Figure(Board board) {
         this.board = board;
-        loadSpriteSheet();
     }
 
-    public void loadSpriteSheet() {
-        if (sheet == null) {
+    static  {
             try {
-                sheet = ImageIO.read(new File("Chess_Pieces_Sprite.svg.png"));
+                sheet = ImageIO.read(new File("Chess\\rsc\\Chess_Pieces_Sprite.svg.png"));
             } catch (IOException e) {
                 throw new RuntimeException("Error loading sprite sheet", e);
             }
-        }
+
+    }
+
+    public void draw(Graphics2D g) {
+        g.drawImage(sprite, x, y, null);
     }
 
 
