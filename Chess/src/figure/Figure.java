@@ -38,7 +38,7 @@ public class Figure {
 
     }
 
-    public void draw(Graphics2D g) {
+    public void draw(Graphics2D g, int x, int y) {
         g.drawImage(sprite, x, y, null);
     }
 

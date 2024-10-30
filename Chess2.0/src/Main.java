@@ -1,10 +1,8 @@
-package main;
-
 import javax.swing.*;
 import java.awt.*;
 
 public
-    class Main {
+class Main {
 
     public static final int width = 1100;
     public static final int height = 800;
@@ -25,8 +23,6 @@ public
         window.setLocationRelativeTo(null);
         window.setVisible(true);
 
-        while (true) {
 
-        }
     }
 }

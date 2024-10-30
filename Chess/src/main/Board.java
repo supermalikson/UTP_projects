@@ -69,7 +69,7 @@ public
 
 
             for (Figure f : figures) {
-                f.draw(g2d);
+                f.draw(g2d, f.x, f.y);
             }
         }
 
