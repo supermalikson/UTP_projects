@@ -12,7 +12,7 @@ class Main {
 
         JFrame window = new JFrame("Chess");
         window.setLayout(new GridBagLayout());
-        window.getContentPane().setBackground(new Color(122, 217, 238));
+        window.getContentPane().setBackground(new Color(122, 217, 238, 255));
         window.setMinimumSize(new Dimension(width,height));
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
