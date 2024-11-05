@@ -27,9 +27,9 @@ public class Sprites {
 
     static  {
         try {
-            sheet = ImageIO.read(new File("Chess\\rsc\\Chess_Pieces_Sprite.svg.png"));
+            sheet = ImageIO.read(new File("Chess2.0\\src\\Chess_Pieces_Sprite.svg.png"));
         } catch (IOException e) {
-            throw new RuntimeException("Error loading sprite sheet", e);
+            System.out.println("Error loading sprite sheet");
         }
     }
 

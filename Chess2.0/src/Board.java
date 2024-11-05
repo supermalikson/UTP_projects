@@ -51,6 +51,8 @@ public class Board extends JPanel {
                 //Highlighting of selected figure
                 if (getSelectedRow() != -1 && getSelectedRow() == i && getSelectedCol() != -1 && getSelectedCol() == j)
                     g2d.setColor(new Color(246, 246, 123));
+                if (getKingR() == i && getKingC() == j)
+                    g2d.setColor(new Color(239, 44, 44));
 
                 g2d.fillRect(j * tileSize, i * tileSize, tileSize, tileSize);
 
@@ -96,9 +98,14 @@ public class Board extends JPanel {
                         sendPromotionChoice(i, j, choice);
                         repaint();
                     }
+                    case 8 -> {
+                        JOptionPane.showMessageDialog(null, "CHECKMATE!");
+                        System.exit(0);
+                    }
                 }
             }
         }
+
     }
 
     public native void setBoard();
@@ -112,5 +119,10 @@ public class Board extends JPanel {
     public native void myMousePressed(int row, int col);
 
     public native void sendPromotionChoice(int row, int col, int choice);
+
+    public native int getKingR();
+    public native int getKingC();
+
+    public native int[][] getBoard();
 
 }
